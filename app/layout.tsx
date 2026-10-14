@@ -12,7 +12,9 @@ export const metadata: Metadata = {
   description: "Портфолио разработчика",
   creator: "Fullstack Developer, Mescheryakov Lev",
   authors: [{ name: "Mescheryakov Lev" }],
-  icons: "/images/logo-lion.svg",
+  icons: process.env.NEXT_PUBLIC_DEPLOY_TARGET === "prod"
+              ? "/portfolio/images/logo-lion.svg"
+              : "/images/logo-lion.svg",
 };
 
 export const viewport: Viewport = {
