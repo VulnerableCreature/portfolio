@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_DEPLOY_TARGET: prod
+          - NEXT_PUBLIC_DEPLOY_TARGET: prod
 
       - name: Verify static output
         run: |
