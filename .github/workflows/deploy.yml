@@ -34,6 +34,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify static output
+        run: |
+          echo "Checking exported files..."
+          ls -la
+          ls -la out
+          test -f out/index.html
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
