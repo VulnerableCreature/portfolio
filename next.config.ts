@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
-
-const isProd = process.env.NEXT_PUBLIC_DEPLOY_TARGET === "prod";
+import { Environment } from "./config/environment";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isProd ? "/portfolio" : "",
+  basePath: Environment.basePath,
   images: {
     unoptimized: true,
   },

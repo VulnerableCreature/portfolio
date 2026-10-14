@@ -32,7 +32,7 @@ export default function StackSection() {
       title="Технологии"
       description="Инструменты, с которыми я работаю каждый день."
     >
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
         {groups.map((group) => (
           <TechGroup
             key={group.title}
