@@ -5,7 +5,7 @@ export function Header() {
     <header className="fixed top-0 left-0 z-50 w-full border-b border-white/5 bg-[#100e14]/95 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
         <Image
-          src="/images/logo-lion.svg"
+          src="/portfolio/images/logo-lion.svg"
           alt="Logo portfolio"
           width={80}
           height={80}
