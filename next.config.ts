@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  output: "export",
+  basePath: "/dev-portfolio",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
