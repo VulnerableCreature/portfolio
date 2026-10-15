@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Environment } from "@/config/environment";
+import { Header } from "@/components/layouts/Header";
+import { basePath } from "@/config/environment";
 
 const geist = Geist_Mono({
   variable: "--font-geist-sans",
@@ -43,11 +44,11 @@ export const metadata: Metadata = {
     "Flutter Developer",
     "Лев Мещеряков Flutter Developer",
     "Dart Developer",
-    "Лев Мещеряков Dart Developer"
+    "Лев Мещеряков Dart Developer",
   ],
   icons: {
-    icon: `${Environment.basePath}/images/logo-lion.svg`,
-    shortcut: `${Environment.basePath}/images/logo-lion.svg`,
+    icon: `${basePath}/images/logo-lion.svg`,
+    shortcut: `${basePath}/images/logo-lion.svg`,
   },
   openGraph: {
     type: "website",
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
       "Портфолио PHP Backend-разработчика: проекты, технический стек.",
     images: [
       {
-        url: `${Environment.basePath}/images/logo-lion.svg`,
+        url: `${basePath}/images/logo-lion.svg`,
         alt: "Логотип портфолио Льва Мещерякова",
       },
     ],
@@ -87,7 +88,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="ru"
       className={`${geist.variable} ${geist.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

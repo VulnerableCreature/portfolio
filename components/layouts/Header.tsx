@@ -1,4 +1,4 @@
-import { Environment } from "@/config/environment";
+import { basePath } from "@/config/environment";
 import Image from "next/image";
 
 export function Header() {
@@ -6,7 +6,7 @@ export function Header() {
     <header className="fixed top-0 left-0 z-50 w-full border-b border-white/5 bg-[#100e14]/95 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
         <Image
-          src={`${Environment.basePath}/images/logo-lion.svg`}
+          src={`${basePath}/images/logo-lion.svg`}
           alt="Logo portfolio"
           width={80}
           height={80}

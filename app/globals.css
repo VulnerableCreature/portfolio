@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
   --background: #100e14;
@@ -32,13 +33,8 @@ body {
       rgba(66, 29, 77, 0.25) 0%,
       transparent 50%
     ),
-    linear-gradient(
-      135deg,
-      #191219 0%,
-      #100e14 55%,
-      #111016 100%
-    );
-    
+    linear-gradient(135deg, #191219 0%, #100e14 55%, #111016 100%);
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--foreground);

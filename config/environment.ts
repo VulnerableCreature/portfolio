@@ -1,18 +1,13 @@
-export enum DeployTarget {
-  LOCAL = "local",
-  PROD = "prod",
-}
+const normalize = (path: string) => {
+  const trimmed = path.trim().replace(/^\/+|\/+$/g, "");
+  return trimmed ? `/${trimmed}` : "";
+};
 
-const target =
-  process.env.NEXT_PUBLIC_DEPLOY_TARGET === DeployTarget.PROD
-    ? DeployTarget.PROD
-    : DeployTarget.LOCAL;
+export const basePath = normalize(process.env.NEXT_PUBLIC_BASE_PATH ?? "");
 
-export const Environment = {
-  target,
+export const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+).replace(/\/+$/, "");
 
-  isProd: target === DeployTarget.PROD,
-  isLocal: target === DeployTarget.LOCAL,
-
-  basePath: target === DeployTarget.PROD ? "/portfolio" : "",
-} as const;
+export const withBase = (path: string) =>
+  `${basePath}${path.startsWith("/") ? path : `/${path}`}`;

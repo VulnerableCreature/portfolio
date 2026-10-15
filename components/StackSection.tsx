@@ -9,11 +9,11 @@ interface TechGroupData {
 const groups: TechGroupData[] = [
   {
     title: "Frontend",
-    items: ["TypeScript", "React", "Vue", "Tailwind"],
+    items: ["TypeScript", "React", "Next.Js", "Tailwind"],
   },
   {
     title: "Backend",
-    items: ["PHP", "Laravel", "REST", "Queues"],
+    items: ["PHP", "Laravel", "REST", "Yii2", "Node.Js", "Websocket"],
   },
   {
     title: "Данные",
@@ -21,7 +21,11 @@ const groups: TechGroupData[] = [
   },
   {
     title: "Инфраструктура",
-    items: ["Docker", "Nginx", "CI/CD", "Linux"],
+    items: ["Docker", "Nginx", "Linux"],
+  },
+  {
+    title: "Artificial Intelligence (AI)",
+    items: ["Chat GPT", "Claude Code"],
   },
 ];
 
