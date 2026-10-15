@@ -10,6 +10,7 @@ import Container from "@/components/ui/Container";
 import Markdown from "@/components/project/Markdown";
 import ContactSection from "@/components/ContactSection";
 import Confidentiality from "@/components/ui/Confidentiality";
+import ProjectBadges from "@/components/project/ProjectBadges";
 
 export const dynamicParams = false;
 
@@ -32,6 +33,7 @@ export default async function ProjectPage(
 ) {
   const { slug } = await props.params;
   const project = getProject(slug);
+
   if (!project) notFound();
 
   const { prev, next } = getNeighbours(slug);
@@ -50,10 +52,16 @@ export default async function ProjectPage(
         </Link>
 
         <div className="mt-6 rounded-3xl border border-white/10 bg-[#0e0e13]/80 p-6 shadow-xl lg:p-8 mb-20">
-          <div className="mb-8 flex gap-2" aria-hidden="true">
-            <span className="size-3 rounded-full bg-white/15" />
-            <span className="size-3 rounded-full bg-white/15" />
-            <span className="size-3 rounded-full bg-white/15" />
+          <div className="flex items-center justify-between mb-6">
+            <div className="mb-8 flex gap-2 items-center" aria-hidden="true">
+              <span className="size-3 rounded-full bg-white/15" />
+              <span className="size-3 rounded-full bg-white/15" />
+              <span className="size-3 rounded-full bg-white/15" />
+            </div>
+            <ProjectBadges
+                activities={project.activities}
+                type={project.type}
+              />
           </div>
 
           <div
@@ -79,7 +87,7 @@ export default async function ProjectPage(
                   <ProjectVideo src={project.video} title={project.title} />
                 </div>
               )}
-
+    
               <TechStack items={project.tags} />
 
               <div className="mt-12">

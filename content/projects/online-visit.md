@@ -19,6 +19,8 @@ tags:
     WebSocket (Pusher),
   ]
 video: /videos/online-visit.mp4
+activities: ["development", "support", "production"]
+type: "commercial"
 ---
 
 ## Описание

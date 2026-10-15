@@ -38,6 +38,8 @@ function readProject(fileName: string): ProjectDetails {
     video: data.video ? withBase(data.video) : undefined,
     content,
     headings: extractHeadings(content),
+    type: data.type ?? [],
+    activities: data.activities ?? [],
   };
 }
 

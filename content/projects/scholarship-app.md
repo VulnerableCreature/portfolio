@@ -6,6 +6,8 @@ year: 2026
 description: Реестр стипендий» помогает автоматизировать обработку приказов о стипендиях
 tags: [Client - Server, Dart, Flutter, Node.Js, XML, Parser, MongoDB]
 video: /videos/scholarship.mp4
+activities: ["development", "support", "production"]
+type: "commercial"
 ---
 
 Веб-приложение для обработки приказов о назначении стипендий, ведения реестра студентов и выплат, подготовки платёжных файлов для банков и контроля истории операций. Интерфейс реализован на Flutter Web, серверная часть предоставляет REST API на Node.js/Express, а данные хранятся в MongoDB.
@@ -141,7 +143,7 @@ Backend реализован на Node.js и Express. Он предоставл�
 | npm                           | Управление зависимостями backend                 |
 | Flutter Pub                   | Управление зависимостями frontend                |
 
-## 7. Структура репозитория
+## Структура репозитория
 
 ```text
 scholarship_app/

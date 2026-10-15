@@ -5,6 +5,8 @@ subtitle: REST API для учёта имущества на Laravel
 year: 2025-2026
 description: Backend для учёта имущества, сотрудников, помещений и выдач.
 tags: [API, PHP, Laravel, MySQL, CQRS, Sanctum, Docker]
+activities: ["support", "production"]
+type: "commercial"
 ---
 
 Backend-приложение для учёта имущества, сотрудников, помещений и операций выдачи. Проект построен на Laravel и предоставляет версионированный REST API для управления основными сущностями системы.
