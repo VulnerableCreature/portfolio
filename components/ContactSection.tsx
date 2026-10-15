@@ -1,4 +1,4 @@
-import Tag from "./project/Tag";
+import SocialLinks from "./project/SocialLinks";
 
 export default function ContactSection() {
   return (
@@ -10,12 +10,8 @@ export default function ContactSection() {
         <h2 className="max-w-2xl text-4xl font-medium leading-tight tracking-tight text-white md:text-5xl">
           Есть идея или задача? Давайте обсудим.
         </h2>
-        <div className="flex flex-wrap gap-3">
-          <Tag key={"email"}>Email: MescheryakovLV@yandex.ru</Tag>
-          <Tag key={"telegram"}>Telegram: @cute_lion</Tag>
-          <Tag key={"vk"}>ВКонтакте: @sweet_lion</Tag>
-          <Tag key={"hh"}>hh profile</Tag>
-        </div>
+
+        <SocialLinks />
       </div>
     </section>
   );

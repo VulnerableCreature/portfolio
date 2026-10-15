@@ -5,7 +5,7 @@ interface ContainerProps {
   className?: string;
 }
 
-/** Единая ширина и боковые отступы для шапки и всех секций. */
+
 export default function Container({
   children,
   className = "",

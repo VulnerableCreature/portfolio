@@ -7,12 +7,9 @@ import type { Heading, ProjectDetails } from "@/types/project";
 
 const PROJECTS_DIR = path.join(process.cwd(), "content/projects");
 
-/** Достаём заголовки "## ..." из markdown, чтобы построить оглавление. */
 function extractHeadings(markdown: string): Heading[] {
-  // Сначала вырезаем блоки кода: "## " внутри них — не заголовки
   const withoutCode = markdown.replace(/```[\s\S]*?```/g, "");
 
-  // Slugger должен давать те же id, что rehype-slug на странице
   const slugger = new GithubSlugger();
 
   return [...withoutCode.matchAll(/^##\s+(.+)$/gm)].map(([, raw]) => {
@@ -24,7 +21,7 @@ function extractHeadings(markdown: string): Heading[] {
 function readProject(fileName: string): ProjectDetails {
   const slug = fileName.replace(/\.md$/, "");
   const file = fs.readFileSync(path.join(PROJECTS_DIR, fileName), "utf8");
-  const { data, content } = matter(file); // data — frontmatter, content — тело
+  const { data, content } = matter(file);
 
   if (!data.title || !data.description) {
     throw new Error(`content/projects/${fileName}: нужны title и description`);
@@ -56,7 +53,6 @@ export function getProject(slug: string) {
   return getProjects().find((p) => p.slug === slug);
 }
 
-/** Соседние проекты для стрелок ‹ › под видео. */
 export function getNeighbours(slug: string) {
   const all = getProjects();
   const i = all.findIndex((p) => p.slug === slug);

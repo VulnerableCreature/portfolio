@@ -20,7 +20,7 @@ export function generateStaticParams() {
 export async function generateMetadata(
   props: PageProps<"/projects/[slug]">,
 ): Promise<Metadata> {
-  const { slug } = await props.params; // в Next 15+ params — это Promise
+  const { slug } = await props.params;
   const project = getProject(slug);
   if (!project) return {};
 
