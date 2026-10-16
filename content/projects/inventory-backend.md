@@ -7,6 +7,7 @@ description: Backend для учёта имущества, сотруднико�
 tags: [API, PHP, Laravel, MySQL, CQRS, Sanctum, Docker]
 activities: ["support", "production"]
 type: "commercial"
+github: "https://github.com/VulnerableCreature/inventory_backend"
 ---
 
 Backend-приложение для учёта имущества, сотрудников, помещений и операций выдачи. Проект построен на Laravel и предоставляет версионированный REST API для управления основными сущностями системы.

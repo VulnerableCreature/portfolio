@@ -1,14 +1,10 @@
-
 import Link from "next/link";
 import type { Project } from "@/types/project";
 import Tag from "./Tag";
 import ProjectBadges from "./ProjectBadges";
+import GithubLink from "./GithubLink";
 
-export default function ProjectCard({
-  project,
-}: {
-  project: Project;
-}) {
+export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors duration-200 hover:border-white/20">
       <div className="flex items-center justify-between gap-4">
@@ -31,13 +27,16 @@ export default function ProjectCard({
         ))}
       </div>
 
-      <Link
-        href={`/projects/${project.slug}`}
-        className="mt-auto inline-flex w-fit items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10"
-      >
-        Подробнее
-        <span aria-hidden="true">→</span>
-      </Link>
+      <div className="mt-auto flex items-center justify-start gap-2">
+        <Link
+          href={`/projects/${project.slug}`}
+          className="inline-flex w-fit items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2 text-sm text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10"
+        >
+          Подробнее
+          <span aria-hidden="true">→</span>
+        </Link>
+        <GithubLink href={project.github} compact />
+      </div>
     </article>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Проекты", href: "#projects" },
-  { label: "Стек", href: "#stack" },
+  { label: "Технологии", href: "#stack" },
 ];
 
 const linkClassName =

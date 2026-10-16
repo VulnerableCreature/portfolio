@@ -1,4 +1,3 @@
-
 export type ProjectActivity = "production" | "support" | "development";
 
 export type ProjectType = "personal" | "commercial";
@@ -14,6 +13,7 @@ export interface Project {
   activities?: ProjectActivity[];
   type?: ProjectType;
   video?: string;
+  github?: string | null;
 }
 
 export interface Heading {

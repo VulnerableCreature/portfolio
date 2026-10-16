@@ -11,6 +11,7 @@ import Markdown from "@/components/project/Markdown";
 import ContactSection from "@/components/ContactSection";
 import Confidentiality from "@/components/ui/Confidentiality";
 import ProjectBadges from "@/components/project/ProjectBadges";
+import GithubLink from "@/components/project/GithubLink";
 
 export const dynamicParams = false;
 
@@ -59,9 +60,9 @@ export default async function ProjectPage(
               <span className="size-3 rounded-full bg-white/15" />
             </div>
             <ProjectBadges
-                activities={project.activities}
-                type={project.type}
-              />
+              activities={project.activities}
+              type={project.type}
+            />
           </div>
 
           <div
@@ -87,8 +88,14 @@ export default async function ProjectPage(
                   <ProjectVideo src={project.video} title={project.title} />
                 </div>
               )}
-    
+
               <TechStack items={project.tags} />
+
+              {project.github && (
+                <div className="mt-6 flex justify-center">
+                  <GithubLink href={project.github} />
+                </div>
+              )}
 
               <div className="mt-12">
                 <Markdown>{project.content}</Markdown>

@@ -40,6 +40,7 @@ function readProject(fileName: string): ProjectDetails {
     headings: extractHeadings(content),
     type: data.type ?? [],
     activities: data.activities ?? [],
+    github: data.github ?? null,
   };
 }
 
