@@ -10,7 +10,6 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 html {
@@ -34,9 +33,7 @@ body {
       transparent 50%
     ),
     linear-gradient(135deg, #191219 0%, #100e14 55%, #111016 100%);
-
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

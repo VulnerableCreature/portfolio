@@ -12,24 +12,17 @@ export default function ProjectCard({
   return (
     <article className="flex flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors duration-200 hover:border-white/20">
       <div className="flex items-center justify-between gap-4">
-        <h3 className="text-xl font-medium text-white">
-          {project.title}
-        </h3>
+        <h3 className="text-xl font-medium text-white">{project.title}</h3>
 
-        <span className="shrink-0 text-sm text-white/50">
+        <span className="shrink-0 text-sm text-white/70 border px-3 py-1 border-red-400/50 bg-red-500/20 rounded-lg">
           {project.year}
         </span>
       </div>
 
-      <p className="mt-3 text-white/60">
-        {project.description}
-      </p>
+      <p className="mt-3 text-white/60">{project.description}</p>
 
       <div className="mt-4">
-        <ProjectBadges
-          activities={project.activities}
-          type={project.type}
-        />
+        <ProjectBadges activities={project.activities} type={project.type} />
       </div>
 
       <div className="my-4 flex flex-wrap gap-2">

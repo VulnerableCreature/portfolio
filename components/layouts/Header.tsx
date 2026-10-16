@@ -1,5 +1,14 @@
 import { basePath } from "@/config/environment";
 import Image from "next/image";
+import Link from "next/link";
+
+const navLinks = [
+  { label: "Проекты", href: "#projects" },
+  { label: "Стек", href: "#stack" },
+];
+
+const linkClassName =
+  "inline-block text-md font-medium text-gray-400 transition-all duration-200 hover:-translate-y-0.5 hover:text-white";
 
 export function Header() {
   return (
@@ -14,23 +23,13 @@ export function Header() {
 
         <nav>
           <ul className="flex items-center justify-start gap-5.5">
-            <li>
-              <a
-                href="#projects"
-                className="inline-block text-md font-medium text-gray-400 transition-all duration-200 hover:-translate-y-0.5 hover:text-white"
-              >
-                Проекты
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="#stack"
-                className="inline-block text-md font-medium text-gray-400 transition-all duration-200 hover:-translate-y-0.5 hover:text-white"
-              >
-                Стек
-              </a>
-            </li>
+            {navLinks.map(({ label, href }) => (
+              <li key={href}>
+                <Link href={href} className={linkClassName}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 

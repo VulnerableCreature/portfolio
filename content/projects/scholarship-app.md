@@ -3,7 +3,7 @@ order: 3
 title: Scholarship App
 subtitle: Веб-приложение для обработки приказов о назначении стипендий
 year: 2026
-description: Реестр стипендий» помогает автоматизировать обработку приказов о стипендиях
+description: Реестр стипендий помогает автоматизировать обработку приказов о стипендиях
 tags: [Client - Server, Dart, Flutter, Node.Js, XML, Parser, MongoDB]
 video: /videos/scholarship.mp4
 activities: ["development", "support", "production"]

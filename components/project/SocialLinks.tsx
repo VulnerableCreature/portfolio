@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 type SocialLink = {
@@ -113,11 +114,11 @@ const socialLinks: SocialLink[] = [
 
 function SocialLinkCard({ link }: { link: SocialLink }) {
   return (
-    <a
+    <Link
       href={link.href}
       target={link.external ? "_blank" : undefined}
       rel={link.external ? "noopener noreferrer" : undefined}
-      className={`group flex min-w-0 items-center gap-3 rounded-xl border border-white/10 bg-white/3 px-4 py-3 transition-all duration-300 ${link.hover}`}
+      className={`group flex w-full min-w-0 items-center gap-3 rounded-xl border border-white/10 bg-white/3 px-4 py-3 transition-all duration-300 sm:w-fit ${link.hover}`}
     >
       <span
         className={`flex size-10 shrink-0 items-center justify-center rounded-lg transition-colors duration-300 ${link.color} ${link.hover}`}
@@ -134,7 +135,7 @@ function SocialLinkCard({ link }: { link: SocialLink }) {
       </span>
 
       <ExternalLinkIcon />
-    </a>
+    </Link>
   );
 }
 
