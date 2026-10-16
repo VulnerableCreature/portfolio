@@ -9,11 +9,11 @@ interface TechGroupData {
 const groups: TechGroupData[] = [
   {
     title: "Frontend",
-    items: ["TypeScript", "React", "Next.Js", "Tailwind"],
+    items: ["Dart", "Flutter", "TypeScript", "React", "Next.Js", "Tailwind"],
   },
   {
     title: "Backend",
-    items: ["PHP", "Laravel", "REST", "Yii2", "Node.Js", "Websocket"],
+    items: ["PHP", "Laravel", "REST", "Yii2", "Node.Js", "Websocket", "Dart"],
   },
   {
     title: "Данные",
