@@ -8,6 +8,7 @@ tags: [Client - Server, Vue, PHP, Laravel, MySql, Queue, Docker, Redis]
 activities: ["development"]
 type: "personal"
 github: "https://github.com/VulnerableCreature/yandex-map-reviews"
+video: "videos/ya-map-reviews.mp4"
 ---
 
 Веб-приложение для подключения организации из Яндекс.Карт, сбора её отзывов и просмотра результатов в личном интерфейсе. Проект состоит из backend API на Laravel и frontend SPA на Vue 3. Сбор отзывов выполняется в фоновой очереди, а данные сохраняются в MySQL.
