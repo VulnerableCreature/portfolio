@@ -1,0 +1,18 @@
+$schema: "https://raw.githubusercontent.com/context-hub/generator/refs/heads/main/json-schema.json"
+documents:
+  - description: structure
+    outputPath: structure.md
+    overwrite: true
+    sources:
+      - type: file
+        description: Structure code
+        sourcePaths:
+          - /app/*
+          - components
+          - config
+          - content
+          - lib
+          - styles
+          - types
+        showCharCount: false
+        showTreeView: true

@@ -2,6 +2,7 @@ import Section from "./project/Section";
 import ProjectCard from "./project/ProjectCard";
 import { getProjects } from "@/lib/projects";
 import WorkInProgress from "./project/WorkInProgress";
+import ProjectGraph from "./graph/ProjectGraph";
 
 export default function ProjectsSection() {
   const projects = getProjects();
@@ -18,6 +19,10 @@ export default function ProjectsSection() {
       </div>
 
       <WorkInProgress />
+
+      <div className="my-3">
+        <ProjectGraph mode="projects" projects={projects} />
+      </div>
     </Section>
   );
 }

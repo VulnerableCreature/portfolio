@@ -12,6 +12,7 @@ import ContactSection from "@/components/ContactSection";
 import Confidentiality from "@/components/ui/Confidentiality";
 import ProjectBadges from "@/components/project/ProjectBadges";
 import GithubLink from "@/components/project/GithubLink";
+import ProjectGraph from "@/components/graph/ProjectGraph";
 
 export const dynamicParams = false;
 
@@ -96,6 +97,14 @@ export default async function ProjectPage(
                   <GithubLink href={project.github} />
                 </div>
               )}
+
+              <div className="mt-3">
+                <ProjectGraph
+                  mode="technologies"
+                  projects={[]}
+                  project={project}
+                />
+              </div>
 
               <div className="mt-12">
                 <Markdown>{project.content}</Markdown>
